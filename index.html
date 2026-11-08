@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zona Fútbol: noticias, resultados, equipos, estadísticas y actualidad del fútbol mundial.">
+    <meta name="author" content="Zona Fútbol">
+    <title>Zona Fútbol | El mundo del fútbol en un solo lugar</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header id="inicio">
+
+        <h1>
+       <img src="images/logo.png"
+         alt="Logotipo de Zona Fútbol">
+        ZONA FÚTBOL
+       </h1>
+        
+        <p>EL MUNDO DEL FÚTBOL EN UN SOLO LUGAR</p>
+
+        <p>
+            Noticias, resultados, estadísticas y toda la pasión
+            del deporte más popular del mundo.
+        </p>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+        <nav aria-label="Menú principal">
+            <ul id="menu-principal">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#noticias">NOTICIAS</a></li>
+                <li><a href="#equipos">EQUIPOS</a></li>
+                <li><a href="#clasificacion">CLASIFICACIÓN</a></li>
+                <li><a href="#resultados">RESULTADOS</a></li>
+                <li><a href="#calendario">CALENDARIO</a></li>
+                <li><a href="#entrenamiento">ENTRENAMIENTO</a></li>
+                <li><a href="#registro">REGISTRO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <hr>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PORTADA -->
+        <section id="portada">
+
+            <h2>BIENVENIDOS A ZONA FÚTBOL</h2>
+
+            <figure>
+                <img
+                    src="images/estadio.png"
+                    alt="Vista panorámica de un estadio de fútbol lleno de aficionados"
+                    width="900"
+                >
+
+                <figcaption>
+                    El fútbol: una pasión que conecta al mundo.
+                </figcaption>
+            </figure>
+
+            <h3>Vive el fútbol como nunca antes</h3>
+
+            <p>
+                En Zona Fútbol encontrarás toda la información que
+                necesitas para mantenerte conectado con el deporte.
+                Conoce las últimas noticias, consulta resultados,
+                descubre estadísticas de tus equipos favoritos y
+                prepárate para los próximos encuentros.
+            </p>
+
+            <p>
+                Nuestro objetivo es reunir en un solo espacio a los
+                aficionados que viven y sienten el fútbol.
+            </p>
+
+            <a href="#noticias">Descubrir noticias</a>
+
+        </section>
+
+        <hr>
+
+        <!-- CARRUSEL DE IMÁGENES: interacción JavaScript -->
+        <section id="galeria" class="carousel-section" aria-label="Galería de fútbol">
+            <h2>GALERÍA DE FÚTBOL</h2>
+            <p>Recorre algunas imágenes de la pasión futbolística.</p>
+            <div class="carousel" aria-roledescription="carrusel">
+                <div class="carousel-slide is-active" data-slide="0" aria-hidden="false">
+                    <img src="images/estadio.png" alt="Estadio de fútbol lleno de aficionados">
+                    <p>La emoción se vive en cada estadio.</p>
+                </div>
+                <div class="carousel-slide" data-slide="1" aria-hidden="true" hidden>
+                    <img src="images/nacional.png" alt="Escudo de Atlético Nacional">
+                    <p>Los clubes representan historia e identidad.</p>
+                </div>
+                <div class="carousel-slide" data-slide="2" aria-hidden="true" hidden>
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1200" alt="Cancha de fútbol preparada para un partido">
+                    <p>El fútbol conecta a millones de personas.</p>
+                </div>
+                <div class="carousel-controls">
+                    <button type="button" id="prev-slide" aria-label="Imagen anterior">❮ Anterior</button>
+                    <span id="slide-counter" aria-live="polite">1 / 3</span>
+                    <button type="button" id="next-slide" aria-label="Imagen siguiente">Siguiente ❯</button>
+                </div>
+                <div class="carousel-dots" aria-label="Seleccionar imagen">
+                    <button type="button" class="carousel-dot is-active" data-go-to="0" aria-label="Mostrar imagen 1" aria-current="true"></button>
+                    <button type="button" class="carousel-dot" data-go-to="1" aria-label="Mostrar imagen 2"></button>
+                    <button type="button" class="carousel-dot" data-go-to="2" aria-label="Mostrar imagen 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- SECCIÓN DE NOTICIAS -->
+        <section id="noticias">
+
+            <h2>ÚLTIMAS NOTICIAS</h2>
+
+            <p>
+                Información, actualidad y novedades del fútbol
+                nacional e internacional.
+            </p>
+
+            <article>
+
+                <h3>El fútbol europeo y sus grandes protagonistas</h3>
+
+                <figure>
+                    <img
+                        src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=900"
+                        alt="Jugadores disputando un encuentro de fútbol"
+                        width="450"
+                    >
+
+                    <figcaption>El espectáculo del fútbol europeo.</figcaption>
+                </figure>
+
+                <p>
+                    Las principales ligas europeas reúnen a algunos
+                    de los clubes y futbolistas más destacados del
+                    mundo. Cada temporada, miles de aficionados
+                    siguen de cerca sus competencias.
+                </p>
+
+                <a href="https://www.uefa.com/" target="_blank" rel="noopener noreferrer">
+                    Consultar información de UEFA
+                </a>
+
+            </article>
+
+            <article>
+
+                <h3>La importancia de las nuevas generaciones</h3>
+
+                <figure>
+                    <img
+                        src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=900"
+                        alt="Futbolistas entrenando en una cancha"
+                        width="450"
+                    >
+
+                    <figcaption>El talento comienza desde la formación.</figcaption>
+                </figure>
+
+                <p>
+                    Las escuelas deportivas y las categorías juveniles
+                    cumplen un papel fundamental en el desarrollo de
+                    nuevos talentos. La disciplina y el entrenamiento
+                    son esenciales para alcanzar grandes objetivos.
+                </p>
+
+                <a href="#entrenamiento">Conoce nuestras rutinas</a>
+
+            </article>
+
+            <article>
+
+                <h3>Colombia y su pasión por el fútbol</h3>
+
+                <figure>
+                    <img
+                        src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=900"
+                        alt="Partido de fútbol en un estadio"
+                        width="450"
+                    >
+
+                    <figcaption>La pasión futbolística de los aficionados.</figcaption>
+                </figure>
+
+                <p>
+                    El fútbol colombiano cuenta con una gran tradición
+                    deportiva y una afición que acompaña a sus equipos
+                    en cada competencia.
+                </p>
+
+                <a href="https://fcf.com.co/" target="_blank" rel="noopener noreferrer">
+                    Visitar la Federación Colombiana de Fútbol
+                </a>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+        <!-- SECCIÓN DE EQUIPOS -->
+        <section id="equipos">
+
+            <h2>EQUIPOS DESTACADOS</h2>
+
+            <p>
+                Conoce algunos de los clubes más reconocidos
+                del fútbol internacional.
+            </p>
+
+            <article>
+
+                <h3>REAL MADRID</h3>
+
+                <img
+                    src="images/realmadrid.png"
+                    alt="Escudo del Real Madrid"
+                    width="120"
+                >
+
+                <p><strong>País:</strong> España</p>
+                <p><strong>Estadio:</strong> Santiago Bernabéu</p>
+                <p><strong>Fundación:</strong> 1902</p>
+
+                <p>
+                    Uno de los clubes más reconocidos del fútbol
+                    mundial, con una extensa trayectoria en
+                    competiciones nacionales e internacionales.
+                </p>
+
+                <a href="https://www.realmadrid.com/" target="_blank" rel="noopener noreferrer">
+                    Sitio oficial
+                </a>
+                <button type="button" class="team-details" data-team="real-madrid">Ver información</button>
+
+            </article>
+
+            <article>
+
+                <h3>FC BARCELONA</h3>
+
+                <img
+                    src="images/barcelona.png"
+                    alt="Escudo del FC Barcelona"
+                    width="120"
+                >
+
+                <p><strong>País:</strong> España</p>
+                <p><strong>Estadio:</strong> Spotify Camp Nou</p>
+                <p><strong>Fundación:</strong> 1899</p>
+
+                <p>
+                    Club reconocido por su historia, su estilo de
+                    juego y su importante presencia en el fútbol
+                    internacional.
+                </p>
+
+                <a href="https://www.fcbarcelona.com/" target="_blank" rel="noopener noreferrer">
+                    Sitio oficial
+                </a>
+                <button type="button" class="team-details" data-team="barcelona">Ver información</button>
+
+            </article>
+
+            <article>
+
+                <h3>MANCHESTER CITY</h3>
+
+                <img
+                    src="images/man-city.png"
+                    alt="Escudo del Manchester City"
+                    width="120"
+                >
+
+                <p><strong>País:</strong> Inglaterra</p>
+                <p><strong>Estadio:</strong> Etihad Stadium</p>
+                <p><strong>Fundación:</strong> 1880</p>
+
+                <p>
+                    Equipo inglés que se ha destacado por su
+                    competitividad y participación en importantes
+                    torneos internacionales.
+                </p>
+
+                <a href="https://www.mancity.com/" target="_blank" rel="noopener noreferrer">
+                    Sitio oficial
+                </a>
+                <button type="button" class="team-details" data-team="manchester-city">Ver información</button>
+
+            </article>
+
+            <article>
+
+                <h3>ATLÉTICO NACIONAL</h3>
+
+                <img
+                    src="images/nacional.png"
+                    alt="Escudo de Atlético Nacional"
+                    width="120"
+                >
+
+                <p><strong>País:</strong> Colombia</p>
+                <p><strong>Ciudad:</strong> Medellín</p>
+                <p><strong>Estadio:</strong> Atanasio Girardot</p>
+
+                <p>
+                    Uno de los clubes tradicionales del fútbol
+                    colombiano, con una gran afición y una
+                    importante historia deportiva.
+                </p>
+
+                <a href="https://www.atlnacional.com.co/" target="_blank" rel="noopener noreferrer">
+                    Sitio oficial
+                </a>
+                <button type="button" class="team-details" data-team="atletico-nacional">Ver información</button>
+
+            </article>
+
+        </section>
+
+        <!-- VENTANA EMERGENTE: información de los equipos -->
+        <dialog id="team-dialog" aria-labelledby="dialog-title">
+            <div class="dialog-content">
+                <button type="button" id="close-dialog" class="dialog-close" aria-label="Cerrar ventana">✕</button>
+                <h2 id="dialog-title">Información del equipo</h2>
+                <p id="dialog-description"></p>
+                <p id="dialog-extra"></p>
+                <button type="button" id="dialog-ok">Cerrar</button>
+            </div>
+        </dialog>
+
+        <hr>
+
+        <!-- TABLA DE CLASIFICACIÓN -->
+        <section id="clasificacion">
+
+            <h2>TABLA DE POSICIONES</h2>
+
+            <p>
+                Ejemplo de clasificación de una competencia
+                futbolística. Los datos son ilustrativos.
+            </p>
+
+            <table border="1">
+
+                <caption>Clasificación general de ejemplo</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Posición</th>
+                        <th scope="col">Equipo</th>
+                        <th scope="col">Partidos</th>
+                        <th scope="col">Victorias</th>
+                        <th scope="col">Empates</th>
+                        <th scope="col">Derrotas</th>
+                        <th scope="col">Puntos</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Real Madrid</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>25</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Barcelona</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>23</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Manchester City</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>22</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Atlético Nacional</td>
+                        <td>10</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>20</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <p>
+                <small>
+                    Nota: esta tabla es un ejemplo académico y
+                    no representa una clasificación oficial.
+                </small>
+            </p>
+
+        </section>
+
+        <hr>
+
+        <!-- RESULTADOS DE PARTIDOS -->
+        <section id="resultados">
+
+            <h2>RESULTADOS DE PARTIDOS</h2>
+
+            <p>
+                Consulta algunos marcadores de ejemplo
+                de encuentros futbolísticos.
+            </p>
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Local</th>
+                        <th scope="col">Marcador</th>
+                        <th scope="col">Visitante</th>
+                        <th scope="col">Competición</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>25/10/2026</td>
+                        <td>Real Madrid</td>
+                        <td>3 - 1</td>
+                        <td>Barcelona</td>
+                        <td>Partido de ejemplo</td>
+                    </tr>
+
+                    <tr>
+                        <td>26/10/2026</td>
+                        <td>Manchester City</td>
+                        <td>2 - 0</td>
+                        <td>Arsenal</td>
+                        <td>Partido de ejemplo</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/10/2026</td>
+                        <td>Atlético Nacional</td>
+                        <td>1 - 1</td>
+                        <td>Millonarios</td>
+                        <td>Partido de ejemplo</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <hr>
+
+        <!-- CALENDARIO DE EVENTOS -->
+        <section id="calendario">
+
+            <h2>PRÓXIMOS EVENTOS DEPORTIVOS</h2>
+
+            <p>
+                Consulta nuestra agenda de ejemplo para
+                organizar y seguir la actividad deportiva.
+            </p>
+
+            <article>
+
+                <h3>Noviembre de 2026</h3>
+
+                <ul>
+
+                    <li>
+                        <time datetime="2026-11-05">5 de noviembre</time>
+                        - Jornada de fútbol internacional.
+                    </li>
+
+                    <li>
+                        <time datetime="2026-11-10">10 de noviembre</time>
+                        - Torneo de clubes.
+                    </li>
+
+                    <li>
+                        <time datetime="2026-11-15">15 de noviembre</time>
+                        - Encuentros amistosos.
+                    </li>
+
+                    <li>
+                        <time datetime="2026-11-20">20 de noviembre</time>
+                        - Jornada de fútbol juvenil.
+                    </li>
+
+                    <li>
+                        <time datetime="2026-11-28">28 de noviembre</time>
+                        - Campeonato de fútbol local.
+                    </li>
+
+                </ul>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+        <!-- ENTRENAMIENTO -->
+        <section id="entrenamiento">
+
+            <h2>ENTRENAMIENTO DEPORTIVO</h2>
+
+            <figure>
+
+                <img
+                    src="images/entrenamiento.png"
+                    alt="Balón de fútbol sobre el césped de una cancha"
+                    width="600"
+                >
+
+                <figcaption>
+                    La preparación física es fundamental para
+                    mejorar el rendimiento deportivo.
+                </figcaption>
+
+            </figure>
+
+            <p>
+                Un buen futbolista necesita desarrollar habilidades
+                físicas, técnicas y mentales. La constancia y
+                la disciplina son fundamentales para alcanzar
+                un buen rendimiento.
+            </p>
+
+            <h3>Plan semanal de entrenamiento</h3>
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Día</th>
+                        <th scope="col">Actividad</th>
+                        <th scope="col">Duración</th>
+                        <th scope="col">Objetivo</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Lunes</td>
+                        <td>Resistencia cardiovascular</td>
+                        <td>40 minutos</td>
+                        <td>Mejorar la condición física</td>
+                    </tr>
+
+                    <tr>
+                        <td>Martes</td>
+                        <td>Control del balón</td>
+                        <td>45 minutos</td>
+                        <td>Mejorar la técnica</td>
+                    </tr>
+
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>Velocidad y coordinación</td>
+                        <td>30 minutos</td>
+                        <td>Desarrollar agilidad</td>
+                    </tr>
+
+                    <tr>
+                        <td>Jueves</td>
+                        <td>Pases y precisión</td>
+                        <td>40 minutos</td>
+                        <td>Mejorar el juego colectivo</td>
+                    </tr>
+
+                    <tr>
+                        <td>Viernes</td>
+                        <td>Entrenamiento táctico</td>
+                        <td>45 minutos</td>
+                        <td>Comprender estrategias</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sábado</td>
+                        <td>Partido de práctica</td>
+                        <td>60 minutos</td>
+                        <td>Aplicar lo aprendido</td>
+                    </tr>
+
+                    <tr>
+                        <td>Domingo</td>
+                        <td>Descanso</td>
+                        <td>Libre</td>
+                        <td>Recuperación física</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <h3>Recomendaciones para los deportistas</h3>
+
+            <ol>
+                <li>Realizar un calentamiento antes de entrenar.</li>
+                <li>Mantener una alimentación equilibrada.</li>
+                <li>Consumir suficiente agua.</li>
+                <li>Respetar los tiempos de descanso.</li>
+                <li>Mantener una buena disciplina deportiva.</li>
+            </ol>
+
+        </section>
+
+        <hr>
+
+        <!-- INFORMACIÓN ADICIONAL -->
+        <aside>
+
+            <h2>¿SABÍAS QUE?</h2>
+
+            <p>
+                El fútbol es uno de los deportes con mayor
+                número de seguidores en el mundo y se practica
+                en diferentes países, culturas y comunidades.
+            </p>
+
+            <p>
+                Además de la competencia, fomenta valores como
+                el trabajo en equipo, el respeto, la disciplina
+                y la perseverancia.
+            </p>
+
+            <h3>Enlaces de interés</h3>
+
+            <ul>
+                <li>
+                    <a href="https://www.fifa.com/" target="_blank" rel="noopener noreferrer">
+                        FIFA
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.uefa.com/" target="_blank" rel="noopener noreferrer">
+                        UEFA
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://fcf.com.co/" target="_blank" rel="noopener noreferrer">
+                        Federación Colombiana de Fútbol
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <hr>
+
+        <!-- FORMULARIO DE REGISTRO -->
+        <section id="registro">
+
+            <h2>ÚNETE A NUESTRA COMUNIDAD</h2>
+
+            <p>
+                ¿Eres un apasionado del fútbol?
+                Regístrate y comparte con nosotros tu pasión
+                por este deporte.
+            </p>
+
+            <form id="registration-form" novalidate>
+
+                <fieldset>
+
+                    <legend>Datos personales</legend>
+
+                    <p>
+                        <label for="nombre">Nombre completo:</label>
+                        <br>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ingresa tu nombre"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico:</label>
+                        <br>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@correo.com"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="edad">Edad:</label>
+                        <br>
+
+                        <input
+                            type="number"
+                            id="edad"
+                            name="edad"
+                            min="5"
+                            max="100"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="ciudad">Ciudad:</label>
+                        <br>
+
+                        <input
+                            type="text"
+                            id="ciudad"
+                            name="ciudad"
+                            placeholder="Ingresa tu ciudad"
+                        >
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Preferencias deportivas</legend>
+
+                    <p>
+                        <label for="equipo">¿Cuál es tu equipo favorito?</label>
+                        <br>
+
+                        <select id="equipo" name="equipo" required>
+
+                            <option value="">Selecciona un equipo</option>
+                            <option value="real-madrid">Real Madrid</option>
+                            <option value="barcelona">FC Barcelona</option>
+                            <option value="manchester-city">Manchester City</option>
+                            <option value="atletico-nacional">Atlético Nacional</option>
+                            <option value="otro">Otro</option>
+
+                        </select>
+                    </p>
+
+                    <p>¿Qué actividad te interesa?</p>
+
+                    <input
+                        type="checkbox"
+                        id="interes-noticias"
+                        name="intereses"
+                        value="noticias"
+                    >
+
+                    <label for="interes-noticias">Noticias deportivas</label>
+
+                    <br>
+
+                    <input
+                        type="checkbox"
+                        id="interes-resultados"
+                        name="intereses"
+                        value="resultados"
+                    >
+
+                    <label for="interes-resultados">Resultados y estadísticas</label>
+
+                    <br>
+
+                    <input
+                        type="checkbox"
+                        id="entrenamientos"
+                        name="intereses"
+                        value="entrenamientos"
+                    >
+
+                    <label for="entrenamientos">Rutinas de entrenamiento</label>
+
+                    <br>
+
+                    <input
+                        type="checkbox"
+                        id="eventos"
+                        name="intereses"
+                        value="eventos"
+                    >
+
+                    <label for="eventos">Eventos deportivos</label>
+
+                    <p>¿Practicas fútbol?</p>
+
+                    <input
+                        type="radio"
+                        id="si"
+                        name="practica"
+                        value="si"
+                        required
+                    >
+
+                    <label for="si">Sí</label>
+
+                    <input
+                        type="radio"
+                        id="no"
+                        name="practica"
+                        value="no"
+                    >
+
+                    <label for="no">No</label>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Cuéntanos más sobre ti</legend>
+
+                    <label for="comentario">
+                        ¿Qué significa el fútbol para ti?
+                    </label>
+
+                    <br>
+
+                    <textarea
+                        id="comentario"
+                        name="comentario"
+                        rows="5"
+                        cols="45"
+                        placeholder="Escribe tu respuesta..."
+                    ></textarea>
+
+                </fieldset>
+
+                <p>
+                    <input
+                        type="checkbox"
+                        id="aceptar"
+                        name="aceptar"
+                        value="si"
+                        required
+                    >
+
+                    <label for="aceptar">
+                        Acepto participar en la comunidad Zona Fútbol.
+                    </label>
+                </p>
+
+                <p>
+                    <button type="submit">ENVIAR REGISTRO</button>
+
+                    <button type="reset">LIMPIAR FORMULARIO</button>
+                </p>
+
+            </form>
+            <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <h2> ZONA FÚTBOL</h2>
+
+        <p>
+            La pasión por el fútbol nos une.
+            Gracias por visitar nuestro portal deportivo.
+        </p>
+
+        <nav aria-label="Enlaces del pie de página">
+
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#equipos">Equipos</a></li>
+                <li><a href="#registro">Registro</a></li>
+            </ul>
+
+        </nav>
+
+        <p>
+            Contacto:
+            <a href="mailto:contacto@zona-futbol.example">
+                contacto@zona-futbol.example
+            </a>
+        </p>
+
+        <p>
+            &copy; 2026 Zona Fútbol.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Proyecto académico desarrollado con HTML5, CSS3 y JavaScript.
+        </p>
+
+        <a href="#inicio">Volver al inicio ↑</a>
+
+    </footer>
+<!-- Archivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

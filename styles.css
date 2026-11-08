@@ -1,0 +1,615 @@
+/* ZONA FÚTBOL - Hoja de estilos */
+:root {
+    --green: #20c978;
+    --green-dark: #073b2a;
+    --green-mid: #10583d;
+    --bg: #202522;
+    --card: #111512;
+    --text: #f2f5f2;
+    --muted: #c5d0c9;
+    --line: #34483d;
+    --gold: #f4c542;
+}
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+a:hover {
+    color: #8df0b9;
+}
+/* ENCABEZADO Y NAVEGACIÓN */
+header#inicio {
+    background: #062c20;
+    color: #fff;
+    padding: 16px max(5%,calc((100% - 1260px)/2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #174b36;
+}
+header#inicio h1 {
+    font-size: clamp(21px,2.4vw,30px);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+header#inicio h1 img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+header#inicio>p {
+    margin: 0;
+    color: #e0eee6;
+    font-size: 14px;
+}
+header#inicio>p:nth-of-type(1) {
+    display: none;
+}
+header#inicio nav {
+    width: 100%;
+    background: #10543a;
+    margin: 0 calc(-1 * max(5%,calc((100% - 1260px)/2)));
+    padding: 0 max(5%,calc((100% - 1260px)/2));
+}
+header#inicio nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+header#inicio nav a {
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+header#inicio nav a:hover {
+    color: #9af0bd;
+}
+.menu-toggle {
+    display: none;
+    background: var(--green);
+    color: #062c20;
+    border: 0;
+    border-radius: 6px;
+    padding: 9px 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* ESTRUCTURA PRINCIPAL */
+main {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 22px;
+}
+/* SECCIONES GENERALES */
+section {
+    padding: 42px 0;
+    border-bottom: 1px solid var(--line);
+}
+section h2 {
+    color: #a9e8c5;
+    text-align: center;
+    font-size: clamp(23px,2.5vw,30px);
+    margin: 0 0 12px;
+}
+section>p {
+    text-align: center;
+    color: var(--muted);
+    margin: 0 auto 24px;
+    max-width: 850px;
+}
+/* PORTADA */
+#portada {
+    max-width: none;
+    margin: 0 -22px;
+    padding: 76px 22px 70px;
+    text-align: center;
+    background: linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.48)),url('images/estadio.png') center 48%/cover no-repeat;
+    border: 0;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#portada h2 {
+    font-size: clamp(27px,3vw,38px);
+    color: white;
+    margin-bottom: 12px;
+}
+#portada figure {
+    display: none;
+}
+#portada h3 {
+    color: white;
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+#portada p {
+    max-width: 720px;
+    color: #f0f4f1;
+    margin: 0 auto 12px;
+}
+#portada>a {
+    display: inline-block;
+    background: var(--green);
+    color: #063522;
+    font-weight: bold;
+    padding: 11px 22px;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 0;
+}
+/* GALERÍA Y CARRUSEL */
+#galeria .carousel {
+    max-width: 900px;
+    margin: 22px auto 0;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+    overflow: hidden;
+}
+/* Fotografías y escudos de la galería */
+.carousel-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* El escudo se muestra completo y centrado */
+.carousel-slide[data-slide="1"] img {
+    width: min(100%, 280px);
+    height: 280px;
+    object-fit: contain;
+    margin: 35px auto;
+}
+.carousel-slide p {
+    text-align: center;
+    color: var(--muted);
+    padding: 10px 0 0;
+}
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 14px 0 4px;
+}
+.carousel-controls button,.team-details,#dialog-ok {
+    background: var(--green);
+    color: #062c20;
+    border: 0;
+    border-radius: 5px;
+    padding: 9px 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    padding: 8px;
+}
+.carousel-dot {
+    width: 11px;
+    height: 11px;
+    border: 0;
+    border-radius: 50%;
+    background: #718279;
+    cursor: pointer;
+}
+.carousel-dot.is-active {
+    background: var(--green);
+}
+/* NOTICIAS Y TARJETAS */
+#noticias, #equipos {
+    display: grid;
+    gap: 18px;
+}
+#noticias {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+#noticias h2,
+#noticias > p,
+#equipos h2,
+#equipos > p {
+    grid-column: 1 / -1;
+}
+#noticias article,
+#equipos article,
+#calendario article {
+    background: var(--card);
+    border: 1px solid #29372f;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 16px #0003;
+}
+#noticias article h3,
+#equipos article h3,
+#calendario article h3 {
+    color: #a9e8c5;
+    text-align: center;
+    margin-bottom: 12px;
+}
+#noticias article figure img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+figcaption {
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+}
+#noticias article p,
+#equipos article p,
+#calendario article p {
+    color: #d6ded8;
+    font-size: 14px;
+}
+/* EQUIPOS */
+#equipos {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+#equipos article {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#equipos article img {
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+    margin: 8px auto 14px;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+#equipos article p {
+    margin: 4px 0;
+}
+#equipos article a {
+    margin: 10px 0;
+}
+#equipos .team-details {
+    margin-top: auto;
+}
+/* VENTANAS DE INFORMACIÓN */
+dialog {
+    margin: auto;
+    border: 1px solid var(--green);
+    border-radius: 12px;
+    background: #17221b;
+    color: white;
+    padding: 26px;
+    width: min(92%,520px);
+    box-shadow: 0 20px 70px #0009;
+}
+dialog::backdrop {
+    background: #000b;
+}
+.dialog-content h2 {
+    color: #a9e8c5;
+}
+.dialog-close {
+    float: right;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+/* TABLAS DEPORTIVAS */
+#clasificacion,#resultados {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    color: var(--text);
+    margin: 20px 0;
+}
+th,td {
+    border: 1px solid #52645a;
+    padding: 10px 12px;
+    text-align: center;
+}
+th {
+    background: #10543a;
+    color: white;
+}
+tbody tr:nth-child(even) {
+    background: #29342d;
+}
+/* CALENDARIO */
+#calendario article {
+    max-width: 900px;
+    margin: 18px auto;
+}
+#calendario ul {
+    padding-left: 24px;
+    color: #d6ded8;
+}
+#calendario li {
+    margin-bottom: 8px;
+}
+/* ENTRENAMIENTO */
+#entrenamiento figure {
+    margin: 20px auto;
+    text-align: center;
+}
+#entrenamiento figure img {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+#entrenamiento h3 {
+    color: #a9e8c5;
+}
+#entrenamiento ol,
+main aside ul {
+    padding-left: 28px;
+    margin: 12px 0;
+}
+#entrenamiento li,
+main aside li {
+    margin-bottom: 8px;
+}
+main aside {
+    padding: 20px;
+    margin-top: 24px;
+}
+main aside p {
+    margin-bottom: 14px;
+}
+/* FORMULARIO DE REGISTRO */
+#registro form {
+    max-width: 760px;
+    margin: 20px auto;
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+#registro fieldset {
+    min-width: 0;
+    padding: 18px;
+    margin-bottom: 18px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+#registro legend {
+    padding: 0 8px;
+    color: var(--green);
+    font-weight: bold;
+}
+#registro form p {
+    margin: 12px 0;
+}
+/* Etiquetas de campos de texto */
+#registro label[for="nombre"],
+#registro label[for="correo"],
+#registro label[for="edad"],
+#registro label[for="ciudad"],
+#registro label[for="equipo"],
+#registro label[for="comentario"] {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: var(--text);
+    font-weight: bold;
+}
+#registro input:not([type="checkbox"]):not([type="radio"]),
+#registro select,
+#registro textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 11px;
+    border: 1px solid #65756b;
+    border-radius: 6px;
+    background: #f7faf8;
+    color: #17221b;
+    font: inherit;
+}
+/* Opciones de selección junto a su texto */
+#registro input[type="checkbox"],
+#registro input[type="radio"] {
+    accent-color: var(--green);
+    margin-right: 6px;
+}
+#registro input[type="checkbox"] + label,
+#registro input[type="radio"] + label {
+    display: inline;
+    margin: 0 12px 0 0;
+    color: var(--text);
+    font-weight: normal;
+}
+#registro input:focus-visible,
+#registro select:focus-visible,
+#registro textarea:focus-visible,
+#registro button:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+#registro textarea {
+    resize: vertical;
+}
+/* Botones de enviar y limpiar */
+#registro button {
+    padding: 11px 16px;
+    margin: 0 8px 8px 0;
+    border: 0;
+    border-radius: 7px;
+    background: var(--green);
+    color: #062c20;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+#registro button[type="reset"] {
+    background: #34483d;
+    color: white;
+}
+#registro button:hover {
+    filter: brightness(1.12);
+}
+.form-message {
+    margin-top: 15px;
+    color: #8ff0b5;
+    font-weight: bold;
+}
+.form-message.success {
+    color: #8ff0b5;
+}
+.form-message.error {
+    color: #ff8a8a;
+}
+/* PIE DE PÁGINA */
+footer {
+    background: #062c20;
+    color: #dce8df;
+    text-align: center;
+    padding: 25px;
+    margin-top: 35px;
+}
+footer h2 {
+    color: var(--green);
+}
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 12px 0;
+    padding: 0;
+}
+/* ACCESIBILIDAD */
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+/* DISEÑO ADAPTABLE */
+@media (max-width:900px) {
+    #equipos {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    #noticias {
+        grid-template-columns: 1fr 1fr;
+    }
+    #noticias article:last-of-type {
+        grid-column: 1/-1;
+    }
+}
+@media (max-width:620px) {
+    header#inicio {
+        padding: 14px 18px;
+    }
+    header#inicio>p {
+        display: none;
+    }
+    header#inicio nav {
+        margin: 0 -18px;
+        padding: 0 18px;
+    }
+    header#inicio nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+        padding: 14px 0;
+    }
+    header#inicio nav ul.is-open {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+    header#inicio nav {
+        order: 3;
+    }
+    header#inicio h1 {
+        font-size: 21px;
+    }
+    main {
+        padding: 0 14px;
+    }
+    #portada {
+        margin: 0 -14px;
+        padding: 55px 18px;
+        min-height: 300px;
+    }
+    section {
+        padding: 32px 0;
+    }
+    #equipos,#noticias {
+        grid-template-columns: 1fr;
+    }
+    #noticias article:last-of-type {
+        grid-column: auto;
+    }
+    #equipos article {
+        max-width: 420px;
+        width: 100%;
+        margin: auto;
+    }
+    .carousel-slide img {
+        height: 220px;
+    }
+    .carousel-slide[data-slide="1"] img {
+        width: min(100%, 180px);
+        height: 180px;
+        margin: 20px auto;
+    }
+    .carousel-controls {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    th,td {
+        padding: 7px;
+        font-size: 13px;
+    }
+    #registro form {
+        padding: 16px;
+    }
+}
